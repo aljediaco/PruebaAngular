@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="pruebaAngular" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link href="temp.css">
+    <link rel="stylesheet" type="text/css" href="temp.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="controller.js"></script>
+    <title>Directivas Js</title>
+</head>
+<body ng-controller="captureMessage">
+    <header>
+
+    </header>
+    <section>
+        <article class="galery">
+
+        </article>
+        <article class="information">
+
+        </article>
+    </section>
+    <div class="bodyForm">
+        <form >
+            <input placeholder="Name(Required)" type="text" ng-model="newMessage.name"><br>
+            <input placeholder="Email(Required)" type="text" ng-model="newMessage.email"><br>
+            <input placeholder="Subject" type="text" ng-model="newMessage.subject"><br>
+            <input placeholder="Write Your message here" type="text" ng-model="newMessage.write"><br>
+            <button ng-click="sendMessage()">Send</button>
+        </form>
+    </div>
+
+    <h1>Aiting room</h1>
+    <ul>
+        <li ng-repeat="message in listMessage">
+            {{message.name}} - {{message.email}} - {{message.subject}} - {{message.write}}
+        </li>
+    </ul>
+</body>
+</html>
