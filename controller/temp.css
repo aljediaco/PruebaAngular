@@ -12,12 +12,19 @@ header {
     z-index: 101;
 }
 
+section {
+    width: 100%;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
 .galery {
     background: rgb(255, 255, 255);
     position: relative;
     margin: 0px;
     width: 100%;
-    height: 1506px;
+    height: 721px;
     z-index: 2;
     float: left;
 }
@@ -27,23 +34,78 @@ header {
     position: relative;
     margin: 0px;
     width: 100%;
-    height: 341px;
+    height: 336px;
     z-index: 40;
     float: left;
 }
 
 .bodyForm {
     width: 100%;
-    height: 500px;
+    height: 564px;
     background: #323232;
+    display: inline-block;
 }
+
+    .contentArticleForm {
+        width: 820px;
+        height: 499px;
+        margin: 0px auto;
+        margin-top: 65px;
+    }
+
+        form {
+            width: 580px;
+            display: inline-block;
+        }
+
+        .headForm {
+            color: white;
+            font-family: Arial;
+        }
+
+        .buttonForm {
+            background: rgb(46, 179, 152);
+            float: right;
+            width: auto;
+        }
+
+        .textComplement {
+            width: 185px;
+            display: inline-block;
+            margin: 0px auto;
+            text-align: justify;
+            font-size: 12px;
+            font-family: arial;
+            color: white;
+            line-height: 1.797;
+            float: right;
+            margin-top: 96px;
+            padding: 0px 25px;
+        }
+
+footer {
+    height: 48px;
+    width: 100%;
+    background: rgb(34, 34, 34);
+    margin: 0px;
+    float:left;
+}
+
+    .footer{
+        font-size: 12px;
+        font-family: arial;
+        margin-left: 40px;
+        color: white;
+        margin-top: 15px;
+    }
 
 input {
     border: none;
     background: rgb(69, 69, 69);
     color: white;
     padding: 10px 20px;
-    margin: 10px;
+    margin: 10px 0px;
+    width: 540px;
 }
 
 button {
@@ -54,3 +116,4 @@ button {
     margin: 10px;
     float: right;
 }
+

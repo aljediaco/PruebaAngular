@@ -1,4 +1,4 @@
-var app = angular.module("pruebaAngular", [])
+angular.module("pruebaAngular", [])
     .controller("captureMessage", function($scope){
         $scope.newMessage = {};
         $scope.listMessage = [
@@ -10,6 +10,9 @@ var app = angular.module("pruebaAngular", [])
             }
         ];
         $scope.sendMessage = function(){
+        debugger;
+            alert("funcion")
+            console.log($scope.newMessage);
             $scope.listMessage.push($scope.newMessage);
             $scope.newMessage = {};
         }
