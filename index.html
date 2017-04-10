@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="appGeneral">
+<head>
+    <meta charset="UTF-8">
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="Src/styles/general.css">
+
+    <!-- App, Controller, Script -->
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/controller/home.js"></script>
+    <script src="Scripts/services/home.js"></script>
+
+    <title>Aplicacion Angular</title>
+</head>
+<body>
+    <header ng-include="'Views/templates/header.html'"></header>
+    <section ui-view>
+        <article class="galery">
+
+        </article>
+        <article class="information">
+
+        </article>
+        <article class="bodyForm">
+            <div class="contentArticleForm">
+                <form ng-submit="sendMessage()">
+                    <div class="headForm">
+                        <p style="font-size:30px;line-height: 0.152;">Get in Touch</p>
+                        <p style="font-size:18px;line-height: 1.198;">In order to get in touch use the contact form below.</p>
+                    </div>
+                    <input placeholder="Name(Required)" type="text" ng-model="newMessage.name"><br>
+                    <input placeholder="Email(Required)" type="text" ng-model="newMessage.email"><br>
+                    <input placeholder="Subject" type="text" ng-model="newMessage.subject"><br>
+                    <input placeholder="Write Your message here" type="text" ng-model="newMessage.write"><br>
+                    <input class="buttonForm" type="submit" value="Send">
+                </form>
+                <div class="resultPruebas">
+                    <h1>Aiting room</h1>
+                    <ul>
+                        <li ng-repeat="message in listMessage">
+                            {{message.name}} - {{message.email}} - {{message.subject}} - {{message.write}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="textComplement">
+                    <p><strong>Quisque Hendrerit:</strong> purus dapi- bus, ornare nibh vitae, viverra nibh.
+                        Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tordor
+                        luctus faucibus morbi vitae.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer ng-include="'Views/templates/footer.html'"></footer>
+</body>
+</html>
